@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/home_fragment">
+
+    <fragment android:id="@+id/home_fragment" android:name="com.kosamtech.scrollrefresh.HomeFragment"
+              android:label="Home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_home_fragment_to_load_fragment" app:destination="@id/load_fragment"/>
+        <action android:id="@+id/action_home_fragment_to_customers_fragment" app:destination="@id/customers_fragment"/>
+        <action android:id="@+id/action_home_fragment_to_loan_fragment" app:destination="@id/loan_fragment"/>
+        <action android:id="@+id/action_home_fragment_to_withdraw_fragment" app:destination="@id/withdraw_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/load_fragment" android:name="com.kosamtech.scrollrefresh.LoadFragment"
+              android:label="@string/load_str" tools:layout="@layout/fragment_load">
+        <action android:id="@+id/action_load_fragment_to_home_fragment" app:destination="@id/home_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/customers_fragment" android:name="com.kosamtech.scrollrefresh.CustomersFragment"
+              android:label="@string/customers_str" tools:layout="@layout/fragment_customers">
+        <action android:id="@+id/action_customers_fragment_to_home_fragment" app:destination="@id/home_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/loan_fragment" android:name="com.kosamtech.scrollrefresh.LoanFragment"
+              android:label="@string/loans_str" tools:layout="@layout/fragment_loan">
+        <action android:id="@+id/action_loan_fragment_to_home_fragment" app:destination="@id/home_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/withdraw_fragment" android:name="com.kosamtech.scrollrefresh.WithdrawFragment"
+              android:label="@string/widthdraw_str" tools:layout="@layout/fragment_withdraw">
+        <action android:id="@+id/action_withdraw_fragment_to_home_fragment" app:destination="@id/home_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/login_fragment" android:name="com.kosamtech.scrollrefresh.LoginFragment"
+              android:label="fragment_login" tools:layout="@layout/fragment_login"/>
+    <fragment android:id="@+id/starter_fragment" android:name="com.kosamtech.scrollrefresh.StarterFragment"
+              android:label="fragment_starter" tools:layout="@layout/fragment_starter">
+        <action android:id="@+id/action_starterFragment_to_home_fragment" app:destination="@id/home_fragment"/>
+        <action android:id="@+id/action_starterFragment_to_loginFragment" app:destination="@id/login_fragment"/>
+    </fragment>
+</navigation>
